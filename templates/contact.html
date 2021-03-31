@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <p>
+        You can reach me at <a href="mailto:hashkart@gmail.com">hashkart@gmail.com</a> or complete the form below..
+    </p>
+    <hr />
+    <br />
+        <div class="container">
+        <form method="post">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-sm">
+                        <label for="fname">First Name</label>
+                        <input type="text"  name="fname" autofocus="true" required="true" class="form-control" placeholder="first name">
+                    </div>
+                    <div class="col-sm">
+                        <label for="lname">Last Name</label>
+                        <input type="text" name="lname" required="true" class="form-control" placeholder="last name">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm">
+                    <label for="email">Email address</label>
+                    <input type="email" name="email" required="true" class="form-control" placeholder="name@example.com">
+                </div>
+                <div class="col-sm">
+                    <label for="phone">Phone Number (optional)</label>
+                    <input type="text" name="message" class="form-control" placeholder="+1-777-777-7777">
+                </div>
+            </div>
+            <br />
+            <div class="form-group">
+                <label for="message">Your message below</label>
+                <textarea required="true" class="form-control" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

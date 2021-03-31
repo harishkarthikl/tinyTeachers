@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <p>
+    This page is designed to show computers can learn by seeing markings. Are you ready to teach this machine to see?
+    The window below shows the video of your computer's webcam (aka what the machine's eyes).
+    Get a whiteboard and a marker and make your own doodles. You have to show the machine one doodle at a time.
+    The doodle can be an alphabet, shapes, smiley face, etc.
+    Take one picture of you doodle for each class and hit "train" for the machine to learn. It's that easy!
+    Make sure the doodle is entirely inside the red square. (psst!, a document camera provides best results)
+    Once trained, hit "predict" and show any of your previous three doodle and see if it can recognize it correctly.
+</p>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8  offset-lg-2">
+            <button class="btn btn-primary" id="snap_class_A_btn">Snap Class A</button>
+            <button class="btn btn-primary" id="snap_class_B_btn">Snap Class B</button>
+            <button class="btn btn-primary" id="snap_class_C_btn">Snap Class C</button>
+            <br />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-8  offset-lg-2">
+            <img src="{{ url_for('video_feed') }}" width="100%">
+            <br />
+        </div>
+     </div>
+    <div class="row">
+        <div class="col-lg-8  offset-lg-2">
+            <button class="btn btn-primary" id="see_train_btn">Train</button>
+            <button class="btn btn-primary" id="see_pred_btn">Predict</button>
+            <br />
+        </div>
+    </div>
+
+</div>
+{% endblock %}

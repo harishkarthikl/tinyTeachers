@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <p>
+    Now that our model has learned to recognize the three classes, its time for the machine to show us what it has learned.
+    </p>
+    <p>
+    Draw one of the 3 doodles trained the machine on, and show it in the red square.
+    Lets see if the machine can recognize the class.
+    The class label is shown outside of the red rectangle in blue.
+    If you are wondering what the number beside the class is, it is the confidence score. 100 means the machine totally confident in its prediction.
+    </p>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8  offset-lg-2">
+            <button class="btn btn-primary" id="see_return_btn">Back</button>
+            <br />
+        </div>
+        <div>
+            <img src="{{ url_for('prediction_video_feed') }}" width="100%">
+        </div>
+    </div>
+</div>
+{% endblock %}

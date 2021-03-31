@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="'container">
+        <p>
+            This page is a very simple video based face recognition system.
+            The face recognition is based on the pretrained Haar Cascades.
+            This page will access you webcam and recognize any faces that are visible.
+            Right now this page is not fully functional yet.
+            The next phase of the project will add a pretrained model that you can teach to recognize faces.
+        </p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8  offset-lg-2">
+                <img src="{{ url_for('video_faces') }}" width="100%">
+                <br />
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
